@@ -1,8 +1,17 @@
-HELP.md
-target/
-.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+# Ignore IDE/editor settings
+.vscode/
+
+# Maven build outputs
+/target/
+/articulos/target/
+
+# Local environment files
+/articulos/.env
+/articulos/.env.*
+!.env.example
+
+# Maven wrapper jar
+/articulos/.mvn/wrapper/maven-wrapper.jar
 
 ### STS ###
 .apt_generated

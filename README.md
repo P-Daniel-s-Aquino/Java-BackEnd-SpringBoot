@@ -17,7 +17,7 @@ Proyecto backend en Spring Boot para gestionar artículos con un CRUD básico. I
 - Spring Data JPA
 - Spring Boot Validation
 - MySQL / MariaDB
-- Lombok (para procesadores, no obligatorio en el código actual)
+- Lombok
 - Maven
 
 ## Estructura del proyecto
