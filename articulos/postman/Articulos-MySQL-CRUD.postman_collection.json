@@ -1,0 +1,92 @@
+{
+  "info": {
+    "name": "API Articulos MySQL - CRUD",
+    "_postman_id": "abcd1234-5678-90ef-ghij-klmnopqrstuv",
+    "description": "Colección de endpoints actualizados para la API de artículos conectada a base de datos MariaDB/MySQL",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080",
+      "type": "string"
+    },
+    {
+      "key": "itemId",
+      "value": "1",
+      "type": "string"
+    },
+    {
+      "key": "itemName",
+      "value": "Producto prueba",
+      "type": "string"
+    },
+    {
+      "key": "itemPrice",
+      "value": "100.0",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "GET - Listar todos los artículos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/articulos"
+      }
+    },
+    {
+      "name": "GET - Obtener artículo por ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/articulos/{{itemId}}"
+      }
+    },
+    {
+      "name": "POST - Crear nuevo artículo",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"{{itemName}}\",\n  \"precio\": {{itemPrice}}\n}"
+        },
+        "url": "{{baseUrl}}/api/articulos"
+      }
+    },
+    {
+      "name": "PUT - Actualizar artículo",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"{{itemName}}\",\n  \"precio\": {{itemPrice}}\n}"
+        },
+        "url": "{{baseUrl}}/api/articulos/{{itemId}}"
+      }
+    },
+    {
+      "name": "DELETE - Eliminar artículo",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": "{{baseUrl}}/api/articulos/{{itemId}}"
+      }
+    }
+  ]
+}

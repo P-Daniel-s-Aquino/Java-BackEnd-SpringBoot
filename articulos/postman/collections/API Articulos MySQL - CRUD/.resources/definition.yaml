@@ -1,0 +1,7 @@
+$kind: collection
+description: Colección de endpoints actualizados para la API de artículos conectada a base de datos MariaDB/MySQL
+variables:
+  baseUrl: http://localhost:8080
+  itemId: "1"
+  itemName: Producto prueba
+  itemPrice: "100.0"

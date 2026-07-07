@@ -80,6 +80,34 @@ O con Maven instalado:
 mvn spring-boot:run
 ```
 
+## Probar con Postman
+
+1. Asegúrate de que la aplicación esté corriendo en `http://localhost:8080`.
+2. Importa la colección `postman/Articulos-MySQL-CRUD.postman_collection.json` en Postman.
+3. Importa el environment `postman/Postman-Environment.json` si quieres usar la variable `baseUrl`.
+4. Selecciona el environment `Articulos API Local` y ejecuta las peticiones.
+
+### Endpoints disponibles
+
+- `GET /api/articulos`
+- `GET /api/articulos/{id}`
+- `POST /api/articulos`
+- `PUT /api/articulos/{id}`
+- `DELETE /api/articulos/{id}`
+
+### Crear artículo en Postman
+
+- Método: `POST`
+- URL: `{{baseUrl}}/api/articulos`
+- Body (raw, JSON):
+
+```json
+{
+  "nombre": "Producto prueba",
+  "precio": 100.5
+}
+```
+
 ## Pruebas
 
 Actualmente solo existe una prueba de carga de contexto:

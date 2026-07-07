@@ -1,0 +1,14 @@
+{
+  "id": "e7ef70d8-0000-4000-8000-000000000000",
+  "name": "Articulos API Local",
+  "values": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080",
+      "enabled": true
+    }
+  ],
+  "timestamp": 0,
+  "synced": false,
+  "syncedFilename": null
+}
